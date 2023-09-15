@@ -37,7 +37,7 @@ target "build_ghcr" {
   inherits = ["settings"]
   output   = ["type=registry"]
   tags     = [
-    "ghcr.io/${OWNER}/${FILE}",
+    "ghcr.io/${OWNER}/cache:${FILE}",
     notequal("", VERSION) ? "ghcr.io/${OWNER}/cache:${FILE}-${VERSION}" : ""
   ]
   cache-to = ["type=inline,mode=max"]
