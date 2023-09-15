@@ -1,0 +1,2 @@
+# docker-mathjax
+Containerized MathJax
