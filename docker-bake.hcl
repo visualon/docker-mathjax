@@ -49,7 +49,7 @@ target "build_docker" {
   output   = ["type=docker"]
   tags = [
     "ghcr.io/${OWNER}/${FILE}",
-    notequal("", VERSION) ? "ghcr.io/${OWNER}/${FILE}:${VERSION}}" : ""
+    notequal("", VERSION) ? "ghcr.io/${OWNER}/${FILE}:${VERSION}" : ""
   ]
 }
 
