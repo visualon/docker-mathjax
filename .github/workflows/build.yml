@@ -37,8 +37,6 @@ jobs:
 
       - name: Test run
         run: docker-compose --file docker-compose.test.yml run sut
-        env:
-          IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
 
       - name: Log into registry
         if: github.ref_name == 'main'
