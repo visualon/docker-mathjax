@@ -1,0 +1,9 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: false
+    restart: unless-stopped
+    ports:
+      - 9000:8080/tcp
