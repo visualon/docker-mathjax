@@ -26,11 +26,10 @@ group "test" {
 }
 
 target "settings" {
-  context    = "./linux"
   inherits   = ["settings"]
   cache-from = [
     "type=registry,ref=ghcr.io/${OWNER}/cache:${FILE}",
-    "type=registry,ref=ghcr.io/${OWNER}/cache:${FILE}-${VERSION}"
+    notequal("", VERSION) ? "type=registry,ref=ghcr.io/${OWNER}/cache:${FILE}-${VERSION}" : ""
   ]
 }
 
