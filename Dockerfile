@@ -3,7 +3,7 @@
 # renovate: datasource=github-releases depName=mathjax lookupName=mathjax/MathJax
 ARG MATHJAX_VERSION=2.7.9
 
-FROM bitnami/nginx:1.26.0-debian-12-r1@sha256:476d94e773ee511bb789fafa69b2fcf39a91549dbe1386b1f64fb8f876ac3883
+FROM bitnami/nginx:1.26.0-debian-12-r2@sha256:0a2d973497aa4a8e7497921958285ec511ab49ad176419f7401f27fe6e1ce34f
 
 ARG MATHJAX_VERSION
 
