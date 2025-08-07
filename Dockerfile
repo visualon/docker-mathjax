@@ -3,7 +3,7 @@
 # renovate: datasource=github-releases depName=mathjax packageName=mathjax/MathJax
 ARG MATHJAX_VERSION=2.7.9
 
-FROM bitnami/nginx:1.28.0-debian-12-r4@sha256:bb3a6396b5d2ef2cf76a547463385581a2c63f32352d5cc5cec236ec32ea759a
+FROM ghcr.io/visualon/nginx:1.28.0@sha256:d9938bac957c8e55c8a52ba2cbc0622c700783fd33cb0940f7c3ada355979235
 
 ARG MATHJAX_VERSION
 
@@ -14,4 +14,5 @@ LABEL maintainer="Michael Kriese <michael.kriese@visualon.de>" \
   org.opencontainers.image.licenses="Apache-2.0" \
   org.opencontainers.image.source="https://github.com/visualon/docker-mathjax" \
   org.opencontainers.image.url="https://github.com/visualon/docker-mathjax" \
+  org.opencontainers.image.description="Mathjax on Alpine NGINX" \
   org.opencontainers.image.version="${MATHJAX_VERSION}"
