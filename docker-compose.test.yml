@@ -1,6 +1,6 @@
 services:
   sut:
     image: "${IMAGE}"
-    command: bash -c 'test -f /app/MathJax.js || (echo "MathJax.js not found" && exit 1)'
+    command: sh -c 'test -f /app/MathJax.js || (echo "MathJax.js not found" && exit 1)'
     
     
