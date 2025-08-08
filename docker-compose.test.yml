@@ -1,6 +1,6 @@
 services:
   sut:
-    image: "${IMAGE}"
-    command: sh -c 'test -f /app/MathJax.js || (echo "MathJax.js not found" && exit 1)'
+    image: "${IMAGE-ghcr.io/visualon/mathjax}"
+    command: sh -c 'set -ex; test -f /app/MathJax.js; (nginx&); sleep 3; curl -sv http://localhost:8080/MathJax.js'
     
     
