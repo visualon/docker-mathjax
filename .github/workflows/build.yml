@@ -25,6 +25,7 @@ jobs:
     timeout-minutes: 30
 
     permissions:
+      attestations: write
       packages: write
       id-token: write
 
