@@ -1,6 +1,6 @@
 services:
   sut:
     image: "${IMAGE-ghcr.io/visualon/mathjax}"
-    command: sh -c 'set -ex; test -f /app/MathJax.js; (nginx&); sleep 3; curl -sv http://localhost:8080/MathJax.js'
+    command: sh -c 'set -ex; test -f /app/tex-chtml.js; (nginx&); sleep 3; curl -sv http://localhost:8080/tex-chtml.js'
     
     
