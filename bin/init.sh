@@ -19,3 +19,9 @@ patch=${BASH_REMATCH[3]}
 VERSION="${major}.${minor}.${patch}"
 echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
 echo "Found version: ${VERSION}"
+
+if [[ "$GITHUB_REF_NAME" == "main" ]]; then
+  echo "TAG=latest" >> "$GITHUB_ENV"
+elif [[ "${GITHUB_REF_NAME:0:6}" == "maint/" ]]; then
+  echo "TAG=${GITHUB_REF_NAME:6}" >> "$GITHUB_ENV"
+fi

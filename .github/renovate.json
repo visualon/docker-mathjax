@@ -4,5 +4,6 @@
     "labels": ["deps"],
     "digest": {
       "extends": ["schedule:weekly"]
-    }
+    },
+    "baseBranchPatterns": ["$default", "maint/2.x"]
   }
