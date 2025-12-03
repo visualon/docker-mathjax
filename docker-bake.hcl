@@ -66,10 +66,10 @@ target "push_ghcr" {
   ]
 
   annotations = [
-    "index,manifest:org.opencontainers.image.licenses=Apache-2.0",
-    "index,manifest:org.opencontainers.image.authors=VisualOn GmbH <code@visualon.de>",
-    "index,manifest:org.opencontainers.image.source=https//github.com/visualon/docker-mathjax",
-    notequal("", VERSION) ? "index,manifest:org.opencontainers.image.version=${VERSION}" : "",
-    "index,manifest:org.opencontainers.image.description=Mathjax on Alpine NGINX",
+    "manifest:org.opencontainers.image.licenses=Apache-2.0",
+    "manifest:org.opencontainers.image.authors=VisualOn GmbH <code@visualon.de>",
+    "manifest:org.opencontainers.image.source=https//github.com/visualon/docker-mathjax",
+    notequal("", VERSION) ? "manifest:org.opencontainers.image.version=${VERSION}" : "",
+    "manifest:org.opencontainers.image.description=Mathjax on Alpine NGINX",
   ]
 }
