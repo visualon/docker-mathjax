@@ -51,7 +51,6 @@ jobs:
     needs: build
 
     runs-on: ubuntu-latest
-    if: env.DRY_RUN != 'true'
 
     permissions:
       contents: write
@@ -62,7 +61,8 @@ jobs:
       - name: Init
         run: ./bin/init.sh
 
-      - uses: ncipollo/release-action@b7eabc95ff50cbeeedec83973935c8f306dfcd0b # v1.20.0
+      - uses: ncipollo/release-action@b7eabc95ff50cbeeedec83973935c8f306dfcd0b # v1.20.
+        if: env.DRY_RUN != 'true'
         with:
           allowUpdates: true
           body: See https://github.com/mathjax/MathJax/releases/tag/${{ env.VERSION }} for more changes
