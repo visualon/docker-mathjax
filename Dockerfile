@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.25.0@sha256:0adf442eae370b6087e08edc7c50b552d80ddf261576f4ebd6421006b2461f12
 
 # renovate: datasource=github-releases depName=mathjax packageName=mathjax/MathJax
-ARG MATHJAX_VERSION=4.1.2
+ARG MATHJAX_VERSION=4.1.3
 
 FROM ghcr.io/visualon/nginx:1.30.3@sha256:61ed7b44a4ccaebad2afdda4f42e6329904634fd6a2c36ab3fcb7e54e4796548
 
