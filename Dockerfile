@@ -3,7 +3,7 @@
 # renovate: datasource=github-releases depName=mathjax packageName=mathjax/MathJax
 ARG MATHJAX_VERSION=2.7.9
 
-FROM ghcr.io/visualon/nginx:1.30.8@sha256:aedd623db418864a29099b01810d5038dc939b2c838bf020ee6c7508e25fde84
+FROM ghcr.io/visualon/nginx:1.30.8@sha256:1e6732622812d260e08b6e31074de9a387b23fc580a575a241f0686f0e734e7a
 
 ARG MATHJAX_VERSION
 
